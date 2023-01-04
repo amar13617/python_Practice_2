@@ -24,6 +24,26 @@ class Car:
 c1 = Car("Toyota", 2016)
 c1.display()
 
+#concept of class inheritance.
+
+class Vehicle:
+    def __init__(self, name,color,price):
+        self.name = name
+        self.color = color
+        self.price = price
+
+    def info(self):
+        print(self.name, self.color, self.price)
+
+class Car(Vehicle):
+
+    def change_gear(self, no):
+        print(self.name, 'change_gear', no)
+
+#create object of car
+car = Car('BMW','Black',35000)
+car.info()
+car.change_gear(5)
 
 
 
